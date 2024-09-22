@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Google Developer Group (NENU)</title>
+    <script src="https://kit.fontawesome.com/0d194b00b9.js" crossorigin="anonymous"></script>
+    <meta name="action-cable-url" content="/cable" />
+    <script>
+        //<![CDATA[
+        window.gon = {}; gon.deployment = "google-run";
+        //]]>
+    </script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', "GTM-5XSKHDX");
+    </script>
+    <!-- <script src="https://www.googletagmanager.com/gtag/js?id=G-2X30ZRBDSG" async="async"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', "G-2X30ZRBDSG", {
+            user_id: ""
+        });
+    </script>
+    <script
+        src="https://cdn.qwiklabs.com/assets/hallofmirrors/polyfills/webcomponents-loader-2e147cb1679d97581f981243bfc2d1c03dc34a58.js"></script>
+    <script src="https://cdn.qwiklabs.com/assets/vendor-5ee6eafe71fd3831091397e1aa344044a8642273.js"></script>
+    <script src="https://cdn.qwiklabs.com/assets/application-1429604ccc3fc8e18c3bbb82924db8cb379595f8.js"></script>
+    <script
+        src="https://cdn.qwiklabs.com/assets/hallofmirrors/hallofmirrors-eb94a19f4e35b65e17007848ffd22bb1aa1c96d0.js"></script>
+    <!-- <script src="https://support.google.com/inapp/api.js"></script> -->
+
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token"
+        content="dOBg/GzYwFXoIqlPftoQ+Yy4C5XVNENww8L8TM64XJZ/IRlwQB34/DZ/jzs8JsHW4xievBMMd4Pa5C+A4IXg4Q==" />
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=yes' name='viewport'>
+    <meta content='1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0' name='google-site-verification'>
+    <meta content='#3681E4' property='msapplication-TileColor'>
+    <meta content='icon_gdg.png' property='msapplication-TileImage'>
+
+
+    <meta content='Qwiklabs' name='Shekhar'>
+    <meta content='Google Developer Group NEHU' property='og:title'>
+    <meta content='website' property='og:type'>
+    <meta content='icon_gdg.png' property='og:image'>
+    <meta content='icon_gdg.png' property='og:logo' size='900x887'>
+    <meta content='icon_gdg.png' property='og:logo' size='994x187'>
+
+
+    <meta property="og:url" content="https://www.cloudskillsboost.google" />
+    <link href="https://www.cloudskillsboost.google" rel="canonical" />
+
+    <link href='/icon_gdg.png' rel='shortcut icon' type='image/x-icon'>
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Mono:400,700|Roboto:300,400,500,700|Google+Sans:300,400,500,700|Google+Sans+Display:400|Material+Icons|Google+Material+Icons|Google+Sans+Text:400,500,700"
+        media="screen" />
+
+    <link rel="stylesheet"
+        href="https://cdn.qwiklabs.com/assets/application-e342c2249dcb9b45cec85c2ed1c13a596dc3fbb1.css" media="all" />
+    <link rel="stylesheet" href="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css"
+        media="screen" />
+
+
+    <style>
+        :root {
+            --primary-text-on-surface-color: #1c3ee9;
+            --primary-text-on-surface-color-dark: #1536d9;
+            --primary-text-on-surface-color-darker: #1330c4;
+            --primary-text-on-surface-color-darkest: #112baf;
+            --primary-surface-color: #1a73e8;
+            --primary-surface-color-rgb: 26, 115, 232;
+            --primary-surface-color-light: #d1e3fa;
+            --primary-surface-color-lightest: #e8f1fd;
+            --text-on-primary-color: #ffffff;
+            --accent-text-on-surface-color: #f000e8;
+            --accent-surface-color: #f9ab00;
+            --accent-surface-color-rgb: 249, 171, 0;
+            --accent-surface-color-light: #ffefcc;
+            --text-on-accent-color: #202124;
+        }
+    </style>
+
+
+
+</head>
+
+<body class=' learner-layout-body '>
+    <ql-drawer-container class='body-container'>
+        <ql-drawer id='app-nav' mode='over' slot='drawer' width='288'>
+            <nav class='ql-sidenav' style="position:relative;top:40%">
+                <ql-sidenav-item href='#jump-content' icon='playlist_add_check' label='Home'></ql-sidenav-item>
+
+                <ql-sidenav-item href='#contact_us_section' icon='school' label='Contact'></ql-sidenav-item>
+
+                <ql-sidenav-item href='#about_us_section' icon='subscriptions' label='About-us'></ql-sidenav-item>
+
+            </nav>
+
+        </ql-drawer>
+        <ql-drawer-content class='body-content' slot='drawer-content'>
+            <div class='sticky'>
+                <ql-toolbar class='app-toolbar' jumpEnabled role='banner'>
+                    <div class='toolbar-navigation' slot='navigation'>
+                        <ql-toggle-button for="app-nav" icon="menu" label="Toggle navigation drawer" tip="Menu"
+                            class=""></ql-toggle-button>
+                    </div>
+                    <div class='toolbar-title ql-title-medium' slot='title'><a class="custom-logo"
+                            aria-label="Google Cloud Skills Boost" href="/">
+                            <div class="custom-logo"><img alt="Google developers Group NEHU" height="24"
+                                    aria-label="Google Developer Group NEHU" src="image/gdg-n.png" /></div>
+                        </a>
+                    </div>
+                    <div class='toolbar-tabs' role='tablist' slot='tabs'><ql-tab href='#jj' label='Home'></ql-tab>
+                        <ql-tab href='#contact_us_section' label='Contact'></ql-tab>
+                        <ql-tab href='#about_us_section' label='About US'></ql-tab>
+                    </div>
+                    <div class='toolbar-actions' slot='action'>
+
+
+                    </div>
+                </ql-toolbar>
+                <div id='callout-container'>
+                    <div class="Confirm_form">
+                        <div>
+
+                            <h2 class="toolbar-title ql-title-medium">
+                                Confirm Registration</h2>
+                            <!-- <span>Confirm Your resigstration by filling up Google Form.</span> -->
+                        </div>
+                        <div class="form_container">
+                            <ql-button data-analytics-action="clicked_header_join" href="#"
+                                label="Confirm"></ql-button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class='page-header'>
+                <ql-toolbar class='page-toolbar'>
+                    <h1 class='toolbar-title ql-title-medium' slot='title'>Google Devloper Group , NEHU</h1>
+                    <div class='toolbar-actions' slot='action'></div>
+                </ql-toolbar>
+                <div id="jj">
+                    <br>
+                </div>
+            </div>
+            <main id='jump-content'>
+                <div class='guest-landing-wrapper'>
+                    <div class='guest-landing-intro'>
+                        <div class='guest-landing-intro__headline'>
+                            <div class='guest-landing-intro__headline__headers'>
+                                <h1 class='ql-display-large'>Google Developer Group, NEHU</h1>
+                                <h2 class='ql-headline-small'>
+                                    Unleash your potential with hands-on learning, tailored just for you by GDG NEHU.
+                                    Explore a curated collection of activities designed to match your unique interests
+                                    and accelerate your professional journey — all in one dynamic community hub.
+                                </h2>
+                            </div>
+                            <img
+                                src="https://cdn.qwiklabs.com/assets/snippet_defaults/landing-page-learning-mosaic-lego-be968b6ba90792aeb2777560b768a09a2c1bbd4c.svg" />
+                        </div>
+                        <div id="about_us_section"></div>
+                        <!-- <div class='guest-landing-intro__discover'>
+                            <div class='guest-landing-intro__discover__headers'>
+                                <h2 class='ql-headline-large'>Discover Google Cloud training your way</h2>
+                            </div>
+                            <div class='guest-landing-intro__discover__tabs'>
+                                <ql-tab-group
+                                    tabNames='[&quot;Learning Path&quot;, &quot;Course&quot;, &quot;Lab&quot;]'>
+                                    <div class='learning_plan-tab' slot='content-0'>
+                                        <div class='grid'>
+                                            <ql-activity-card
+                                                imageSrc='https://cdn.qwiklabs.com/l06TqzOGqbtuuVf1pt5S9QDArDvHagvorKjDhDS0pfo%3D'
+                                                name='Public Preview' path='/paths/371'></ql-activity-card>
+                                            <ql-activity-card
+                                                imageSrc='https://cdn.qwiklabs.com/wz81lWqgTezdpanP7jY1bKrpvRVKFUiwPMztbjGgtU0%3D'
+                                                name='Machine Learning Engineer Learning Path'
+                                                path='/paths/17'></ql-activity-card>
+                                            <ql-activity-card
+                                                imageSrc='https://cdn.qwiklabs.com/86AUxPGMtxf5sJmdSDh1eGZL9WRGlLEpX5lWuZJcZb0%3D'
+                                                name='Advanced: Generative AI for Developers Learning Path'
+                                                path='/paths/183'></ql-activity-card>
+                                            <ql-activity-card
+                                                imageSrc='https://cdn.qwiklabs.com/sDvHvQLHqe%2BXLnrE4JOPQgIveawGsOA%2FrQlejayRitI%3D'
+                                                name='Network Engineer Learning Path'
+                                                path='/paths/14'></ql-activity-card>
+                                            <ql-activity-card
+                                                imageSrc='https://cdn.qwiklabs.com/6W9uxjomB0c7uU%2FjtvELmSKJ%2FrHAFngai5szxIsD%2F14%3D'
+                                                name='Security Engineer Learning Path'
+                                                path='/paths/15'></ql-activity-card>
+                                            <ql-activity-card
+                                                imageSrc='https://cdn.qwiklabs.com/F2U3M2Ad76pZ0181Xp1dG239nrr6Xx2i9aSDPMO05FI%3D'
+                                                name='Gemini for Google Workspace' path='/paths/249'></ql-activity-card>
+                                        </div>
+                                        <div class='guest-landing-intro__discover__tabs__next'>
+                                            <a href='/paths'>See all learning paths</a>
+                                        </div>
+                                    </div>
+                                    <div class='courses-tab' slot='content-1'>
+                                        <div class='grid'>
+                                            <ql-activity-card aria-label='Managing Cloud Infrastructure with Terraform'
+                                                imageSrc='https://cdn.qwiklabs.com/06c%2BE%2F78vW9evIxlhG53uonlYCaKB2oJTtsKYjuS8EQ%3D'
+                                                name='Managing Cloud Infrastructure with Terraform'
+                                                path='/course_templates/746' type='course'></ql-activity-card>
+
+                                            <ql-activity-card aria-label='Derive Insights from BigQuery Data'
+                                                imageSrc='https://cdn.qwiklabs.com/QlISwn8678nHhE9uvpqsvcjNZkDQNu6dU0SUdr7%2Bwec%3D'
+                                                name='Derive Insights from BigQuery Data' path='/course_templates/623'
+                                                type='course'></ql-activity-card>
+
+                                            <ql-activity-card aria-label='Use Machine Learning APIs on Google Cloud'
+                                                imageSrc='https://cdn.qwiklabs.com/4rMa1zeVwwLX8OBIQTsV98MLR%2FOKDOxLif5mhqblyJs%3D'
+                                                name='Use Machine Learning APIs on Google Cloud'
+                                                path='/course_templates/630' type='course'></ql-activity-card>
+
+                                            <ql-activity-card
+                                                aria-label='Language, Speech, Text, &amp; Translation with Google Cloud APIs'
+                                                imageSrc='https://cdn.qwiklabs.com/%2Fuq8ZLWpBwlunLbphQPHuSEgIQgZxNapBXxAZ0om%2BjI%3D'
+                                                name='Language, Speech, Text, &amp; Translation with Google Cloud APIs'
+                                                path='/course_templates/745' type='course'></ql-activity-card>
+
+                                            <ql-activity-card
+                                                aria-label='Migrate MySQL data to Cloud SQL using Database Migration Service'
+                                                imageSrc='https://cdn.qwiklabs.com/Hzsx8PD0xzkQJBXMQ3qCq9rQZy9rSXLsuDj3XBKDEdc%3D'
+                                                name='Migrate MySQL data to Cloud SQL using Database Migration Service'
+                                                path='/course_templates/629' type='course'></ql-activity-card>
+
+                                            <ql-activity-card
+                                                aria-label='Monitor Environments with Google Cloud Managed Service for Prometheus'
+                                                imageSrc='https://cdn.qwiklabs.com/dv0KNZFzw9Sl5fLH5OfzP96bzmbyYmQ6OZcVT4W7aMI%3D'
+                                                name='Monitor Environments with Google Cloud Managed Service for Prometheus'
+                                                path='/course_templates/761' type='course'></ql-activity-card>
+
+                                        </div>
+                                        <div class='guest-landing-intro__discover__tabs__next'>
+                                            <a href='/catalog?format=courses'>See all courses</a>
+                                        </div>
+                                    </div>
+                                    <div class='labs-tab' slot='content-2'>
+                                        <div class='grid'>
+                                            <ql-activity-card aria-label='Use Cloud Run Functions to Load BigQuery'
+                                                name='Use Cloud Run Functions to Load BigQuery'
+                                                path='/focuses/102965?parent=catalog' type='lab'></ql-activity-card>
+
+                                            <ql-activity-card
+                                                aria-label='Protect and Recover Microsoft SQL Server with Actifio'
+                                                name='Protect and Recover Microsoft SQL Server with Actifio'
+                                                path='/focuses/20364?parent=catalog' type='lab'></ql-activity-card>
+
+                                            <ql-activity-card aria-label='Managing Vault Tokens'
+                                                name='Managing Vault Tokens' path='/focuses/32201?parent=catalog'
+                                                type='lab'></ql-activity-card>
+
+                                            <ql-activity-card aria-label='Introduction to Convolutions with TensorFlow'
+                                                name='Introduction to Convolutions with TensorFlow'
+                                                path='/focuses/49256?parent=catalog' type='lab'></ql-activity-card>
+
+                                            <ql-activity-card
+                                                aria-label='Arcade Hero: Enter the Artifact Registry Policy'
+                                                name='Arcade Hero: Enter the Artifact Registry Policy'
+                                                path='/focuses/89732?parent=catalog' type='lab'></ql-activity-card>
+
+                                            <ql-activity-card
+                                                aria-label='Create a Cosmetic Anomaly Detection Model using Visual Inspection AI'
+                                                name='Create a Cosmetic Anomaly Detection Model using Visual Inspection AI'
+                                                path='/focuses/34181?parent=catalog' type='lab'></ql-activity-card>
+
+                                        </div>
+                                        <div class='guest-landing-intro__discover__tabs__next'>
+                                            <a href='/catalog?format=labs'>See all labs</a>
+                                        </div>
+                                    </div>
+                                </ql-tab-group>
+                            </div>
+                        </div> -->
+                        <div class='guest-landing-intro__elevate'>
+                            <div class='guest-landing-intro__elevate__headers'>
+                                <h2 class='ql-headline-large'>Elevate your career with Google Developer Group
+                                </h2>
+                            </div>
+                            <div class='guest-landing-intro__elevate__grid'>
+                                <!-- <img
+                                    src="https://cdn.qwiklabs.com/assets/snippet_defaults/landing-page-build-in-the-cloud-c28faa8f61e03fd65e07c8e58efbceef38644b0f.svg" /> -->
+                                <h1 class="main-title">GenAI Study Jam 2024</h1>
+                                <p class="description">GenAI Study Jam 2024 is a global initiative aimed at introducing
+                                    participants to the exciting world of Generative AI. Organized by <strong>Google
+                                        Developer Groups (GDG)</strong> and supported by <strong>Google Cloud</strong>,
+                                    this event is designed for developers, students, and tech enthusiasts to dive into
+                                    the potential of Generative AI and explore its practical applications.</p>
+
+                                <h2 class="features-title">Key Features of GenAI Study Jam 2024:</h2>
+                                <ul class="features-list">
+                                    <li><strong>Hands-on Learning:</strong> Participants get the opportunity to work
+                                        with Google Cloud tools, learn how to create AI models, and generate unique
+                                        content using AI technologies.</li>
+
+                                    <li><strong>Workshops and Labs:</strong> The event includes guided labs, tutorials,
+                                        and workshops led by AI experts to help attendees understand the core concepts
+                                        of Generative AI, such as language models, image generation, and text-to-speech
+                                        applications.</li>
+
+                                    <li><strong>Networking Opportunities:</strong> The Study Jam brings together
+                                        developers from different parts of the world, allowing participants to connect,
+                                        collaborate, and share their experiences.</li>
+
+                                    <li><strong>Project Building:</strong> Participants are encouraged to apply their
+                                        learning to real-world projects, gaining practical experience in building AI
+                                        solutions.</li>
+
+                                    <li><strong>Certification:</strong> Upon successful completion of the Study Jam,
+                                        participants often receive badges or certificates, validating their new skills
+                                        and showcasing them to potential employers or peers.</li>
+
+                                    <li><span class="highlight">Limited Seats:</span> Since the event offers exclusive
+                                        and focused learning, seats are often limited, making early registration a
+                                        priority.</li>
+                                </ul>
+
+                                <p class="conclusion">GenAI Study Jam 2024 provides a unique blend of education,
+                                    networking, and project development, making it a great opportunity for individuals
+                                    eager to expand their skills in the rapidly evolving field of AI.</p>
+
+
+                            </div>
+                            <div class="custom_grid_img">
+
+                                <div class='guest-landing-intro__elevate__grid'
+                                    style="display: flex; justify-content: center;align-content: center;flex-wrap: wrap;">
+                                    <div class='guest-landing-intro__elevate__grid__block'>
+                                        <img src="https://media.discordapp.net/attachments/1287494506119430175/1287494618560200794/image4.png?ex=66f1c04d&is=66f06ecd&hm=bd504ec1b5f3886e4d6f336fbe5309b9e416fc0d91ccb8951484a05861474209&=&format=webp&quality=lossless&width=620&height=620"
+                                            style="width: 500px;height: inherit;" />
+                                    </div>
+
+                                    <div class='guest-landing-intro__elevate__grid__block'>
+                                        <img src="https://media.discordapp.net/attachments/1287494506119430175/1287494619470499860/image5.png?ex=66f1c04d&is=66f06ecd&hm=08d1910ac8a1b004a208875b722796a8043454b19a74dc86a8be79e42511ebb5&=&format=webp&quality=lossless&width=620&height=620"
+                                            style="width: 500px;height: inherit;" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class='guest-landing-intro__help'>
+                            <div class='guest-landing-intro__help__headers'>
+                                <h2 class='ql-headline-large'>Frequently asked questions</h2>
+                            </div>
+                            <div class='guest-landing-intro__help__body'>
+                                <div class='guest-landing-intro__help__body__qa' id='qa_0'>
+                                    <div class='guest-landing-intro__help__body__qa__question'>
+                                        <h3 class='ql-headline-medium'>What is Google Devloper Group (GDG)</h3>
+                                        <ql-toggle-button class='guest-landing-intro__help__body__qa__question__button'
+                                            for='qa_0'>
+                                            expand_less
+                                        </ql-toggle-button>
+                                    </div>
+                                    <div class='answer'>
+                                        <h3 class='ql-body-large'>GDG (Google Developer Groups) is a global community
+                                            for developers interested in Google technologies. It offers networking
+                                            opportunities, workshops, and events to learn, share, and collaborate on
+                                            technical projects. Members range from beginners to experienced developers..
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class='guest-landing-intro__help__body__qa' id='qa_1'>
+                                    <div class='guest-landing-intro__help__body__qa__question'>
+                                        <h3 class='ql-headline-medium'>How Google Developer Group (GDG) will help me to
+                                            improve my skills?</h3>
+                                        <ql-toggle-button class='guest-landing-intro__help__body__qa__question__button'
+                                            for='qa_1'>
+                                            expand_less
+                                        </ql-toggle-button>
+                                    </div>
+                                    <div class='answer'>
+                                        <h3 class='ql-body-large'>Joining a GDG can help improve your skills by
+                                            providing access to hands-on workshops, technical talks, and coding sessions
+                                            led by experts in various Google technologies. You'll also gain exposure to
+                                            new tools, best practices, and real-world problem-solving techniques, while
+                                            networking with fellow developers to share knowledge and collaborate on
+                                            projects.</h3>
+                                    </div>
+                                </div>
+                                <div class='guest-landing-intro__help__body__qa' id='qa_2'>
+                                    <div class='guest-landing-intro__help__body__qa__question'>
+                                        <h3 class='ql-headline-medium'>What kind of events can I expect from a GDG?</h3>
+                                        <ql-toggle-button class='guest-landing-intro__help__body__qa__question__button'
+                                            for='qa_2'>
+                                            expand_less
+                                        </ql-toggle-button>
+                                    </div>
+                                    <div class='answer'>
+                                        <h3 class='ql-body-large'>
+                                            <p>
+                                                GDG organizes a variety of events, including hackathons, tech talks,
+                                                coding bootcamps, and workshops on Google technologies like Android,
+                                                Firebase, Google Cloud, and more. These events offer opportunities for
+                                                hands-on learning and direct interaction with industry professionals.
+                                            </p>
+
+                                            <!-- <p>Learn more about <a href="https://cloud.google.com/learn/certificates?e=48754805&amp;hl=en" target="_blank">Cloud Certificates here</a>!</p></h3> -->
+                                    </div>
+                                </div>
+                                <div class='guest-landing-intro__help__body__qa' id='qa_3'>
+                                    <div class='guest-landing-intro__help__body__qa__question'>
+                                        <h3 class='ql-headline-medium'>Do I need to have advanced skills to join a GDG?
+                                        </h3>
+                                        <ql-toggle-button class='guest-landing-intro__help__body__qa__question__button'
+                                            for='qa_3'>
+                                            expand_less
+                                        </ql-toggle-button>
+                                    </div>
+                                    <div class='answer'>
+                                        <!-- <h3 class='ql-body-large'><p>Learners can preview the certificates at <a href="https://www.youtube.com/@googlecloud/courses" target="_blank">no cost on YouTube</a>. To earn the certificate credential, purchase a $29US/month subscription to Google Cloud Skills Boost and complete the series of courses in the learning path.  The monthly subscription also grants access to all courses and hands-on labs in the Google Cloud Skills Boost catalog.</p> -->
+
+                                        <p><strong>No,</strong> welcomes developers of all skill levels, from beginners
+                                            to experts. Whether you're just starting out or looking to deepen your
+                                            knowledge, GDG provides a supportive environment where you can learn and
+                                            grow at your own pace.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <footer>
+                <div class="social_media_container">
+                    <div class="heading_section">
+                        <h3 class="footer_heading ">Connect with us!</h3>
+                    </div>
+                    <div class="social_icon_container">
+                        <div class="icons_container">
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                        <div class="icons_container">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="icons_container">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="icons_container">
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></i></a>
+                        </div>
+                        <div class="icons_container">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="midsection">
+                    <div class="midsesction_parta">
+                        <img src="https://media.discordapp.net/attachments/1287494506119430175/1287494620003172406/gdc.gif?ex=66f1c04d&is=66f06ecd&hm=d3f683d1b0bb0b78f45c3449f99d62d2b62f0ad7ac81275f90ad777b14758dfe&="
+                            alt="GDG" sizes="" srcset="" class="footer_img">
+                    </div>
+                    <div class="midscection_partb">
+                        <div class="contact_us_section" id="contact_us_section">
+                            <div>
+                                <span class="contact_us_lable">WhatsApp : </span> <span class="contact_us_contnet"><a
+                                        href="https://chat.whatsapp.com/ESYjhdzSWoNB5UQ64YRPnL" target="_blank">Join WhatsApp
+                                        Group</a></span>
+                            </div>
+                            <div>
+                                <span class="contact_us_lable">GDG community: </span> <span
+                                    class="contact_us_contnet"><a
+                                        href="https://gdg.community.dev/gdg-on-campus-north-eastern-hill-university-shillong-india/" target="_blank">GDG
+                                        community NEHU</a></span>
+                            </div>
+                            <div>
+                                <span class="contact_us_lable">Google Form : </span> <span class="contact_us_contnet"><a
+                                        href="#" target="_blank" rel="noopener noreferrer">Google form </a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_section">
+                    <p>© 2024 GDG NEHU. All rights reserved.</p>
+                </div>
+            </footer>
+        </ql-drawer-content>
+    </ql-drawer-container>
+
+    <span class='hidden' id='flash-sibling-before'></span>
+    <ql-snackbar></ql-snackbar>
+
+    <script data-glue-cookie-notification-bar-category='2B'
+        src='https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.js'></script>
+
+
+
+
+
+    <script>
+        document.addEventListener("turbo:load", function () {
+            ql.initMaterialInputs();
+            initChosen();
+            initTabs();
+            ql.list.init();
+            ql.favoriting.init();
+            ql.header.myAccount.init();
+            initTooltips();
+            ql.autocomplete.init();
+            ql.modals.init();
+            ql.toggleButtons.init();
+            ql.analytics.init();
+            Turbo.session.drive = false;
+            ql.messages.init();
+            ql.jumpContent.init();
+
+        }, { once: true });
+    </script>
+
+</body>
+<link rel="stylesheet" href="slide.css">
+
+
+</html>
